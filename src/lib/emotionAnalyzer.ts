@@ -1,12 +1,54 @@
 import { EmotionAnalysis } from '@/types/emotion';
 
 const emotionKeywords = {
-  happy: ['happy', 'joy', 'excited', 'great', 'amazing', 'wonderful', 'fantastic', 'good', 'smile', 'laugh'],
-  sad: ['sad', 'depressed', 'down', 'unhappy', 'miserable', 'cry', 'tears', 'hurt', 'pain', 'lonely'],
-  angry: ['angry', 'mad', 'furious', 'rage', 'hate', 'pissed', 'annoyed', 'frustrated', 'fuck', 'damn'],
-  anxious: ['anxious', 'worried', 'nervous', 'scared', 'afraid', 'panic', 'stress', 'overwhelmed', 'tense'],
-  neutral: ['okay', 'fine', 'alright', 'normal', 'whatever', 'sure', 'yes', 'no'],
-  crisis: ['die', 'death', 'kill', 'suicide', 'hurt myself', 'end it', 'give up', 'hopeless', 'worthless']
+  happy: [
+    "joy", "excited", "great", "amazing", "happy", "wonderful", "fantastic", "good", "smile", "laugh",
+    "delighted", "cheerful", "pleased", "content", "optimistic", "blessed", "ecstatic", "blissful", "thrilled", "radiant",
+    "upbeat", "merry", "elated", "euphoric", "satisfied", "buoyant", "sparkling", "grateful"
+  ],
+  sad: [
+    "sad", "depressed", "down", "unhappy", "cry", "tears", "hurt", "pain", "lonely",
+    "sorrow", "miserable", "grieving", "melancholic", "heartbroken", "desolate", "gloomy", "downcast", "mourning", "despair",
+    "blue", "discouraged", "forlorn", "heavy-hearted", "crushed", "wistful"
+  ],
+  angry: [
+    "angry", "hates", "rage", "annoyed", "pissed", "annoy", "frustrated", "fuck", "damn",
+    "furious", "irate", "enraged", "resentful", "infuriated", "outraged", "mad", "pissed off",
+    "hostile", "agitated", "bitter", "cross", "vindictive", "provoked"
+  ],
+  anxious: [
+    "anxious", "worried", "nervous", "scared", "afraid", "panic", "stress", "overwhelmed", "tense",
+    "petrified", "terrified", "uneasy", "jumpy", "startled", "apprehensive", "shaky", "paranoid", "restless",
+    "fidgety", "hyper", "tight", "uneasy", "on edge", "insecure"
+  ],
+  love: [
+    "love", "affection", "caring", "adoring", "tender", "cherished", "passionate", "fond", "devoted", "infatuated",
+    "romantic", "sweetheart", "dear", "beloved", "date", "heart", "affinity"
+  ],
+  surprise: [
+    "surprised", "astonished", "amazed", "startled", "stunned", "shocked", "bewildered", "dumbfounded", "impressed",
+    "awe", "jaw-drop", "unexpected", "speechless", "gobsmacked", "flabbergasted"
+  ],
+  disgust: [
+    "disgusted", "repulsed", "revolted", "grossed out", "appalled", "horrified", "nauseated", "sickened", "put off",
+    "disturbed", "loathsome", "abhorrent", "repellent", "offended", "recoiling"
+  ],
+  hopeful: [
+    "hopeful", "encouraged", "confident", "positive", "inspired",
+    "uplifted", "motivated", "expectant", "trusting", "reassured"
+  ],
+  lonely: [
+    "lonely", "isolated", "abandoned", "alienated", "forgotten",
+    "lonesome", "forsaken", "unwanted", "solitary", "friendless"
+  ],
+  calm: [
+    "calm", "peaceful", "serene", "tranquil", "relaxed", "restful",
+    "chilled", "collected", "soothing", "gentle", "composed"
+  ],
+  crisis: [
+    "die", "death", "kill", "suicide", "hurt myself", "end it", "give up", "hopeless", "worthless",
+    "over", "done for", "ruined", "lost", "nothing left", "broken", "cannot go on", "finished"
+  ]
 };
 
 export function analyzeEmotion(text: string): EmotionAnalysis {
